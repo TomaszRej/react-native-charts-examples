@@ -1,20 +1,23 @@
 import React from 'react';
-import {SafeAreaView, Text, StyleSheet} from 'react-native';
+import {SafeAreaView, ScrollView, Text} from 'react-native';
+import BasicLineChart from './src/components/basic/BasicLineChart';
+import MultipleLinesChart from './src/components/multipleLine/MultipleLinesChart';
+import TooltipChart from './src/components/tooltip/TooltipChart';
+import ScrollableChart from './src/components/scrollable/ScrollableChart';
+import MultipleAreaChart from './src/components/multipleArea/MultipleAreaChart';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.wrapper}>
-      <Text>Hello</Text>
+    <SafeAreaView>
+      <ScrollView>
+        <ScrollableChart />
+        <BasicLineChart />
+        <MultipleLinesChart />
+        <MultipleAreaChart />
+        <TooltipChart />
+      </ScrollView>
     </SafeAreaView>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-  wrapper: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
